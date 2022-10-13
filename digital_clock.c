@@ -7,6 +7,8 @@ github : https://github.com/r9hit/
 #include<stdio.h>
 #include<windows.h>
 
+void choice();
+void timer();
 void instructions_for_clock();
 void clock();
 
@@ -15,6 +17,24 @@ int main(){
     printf("        github : https://github.com/r9hit/ \n\n");
     clock();
     return 0;
+}
+
+void choice(){
+    int option; 
+    read:
+    printf("Choose one option :\n");
+    printf("\n Press 1 for setting timer\n"); 
+    printf("\n Press 2 for setting timer\n");
+    scanf("%d",&option);
+    if(option ==1){
+        timer();
+    }
+    else if(option == 2 ){
+        clock();
+    }
+    else{
+     goto read;
+    }
 }
 
 /* function for display instructions for clock*/
